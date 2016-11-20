@@ -3,7 +3,6 @@
 import * as express from "express";
 
 var geoip = require('geoip-lite');
-var ipware = require('ipware')();
 
 module Route {
 
@@ -11,9 +10,7 @@ module Route {
 
         public index(req: express.Request, res: express.Response, next: express.NextFunction) {
 
-            let ip = req.params.ip ? req.params.ip : null;
-            ip = (!ip && ipware.get_ip? ipware.get_ip: ip);
-
+            let ip = req.params.ip ? req.params.ip : (req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.ip || null);
             let data = ip?geoip.lookup(ip):{};
 
             if(data && ip) {
