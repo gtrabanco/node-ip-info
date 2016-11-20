@@ -4,7 +4,8 @@
   "description": "Information of ip",
   "main": "bin/www",
   "scripts": {
-    "start": "PORT=3000 NODE_ENV=production ./node_modules/.bin/nodemon .",
+    "start": "PORT=3280 NODE_ENV=production node .",
+    "startdev": "PORT=3000 NODE_ENV=development ./node_modules/.bin/nodemon .",
     "updateipdb": " cd ./node_modules/geoip-lite && npm run updatedb",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
