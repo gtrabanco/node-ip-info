@@ -1,0 +1,58 @@
+{
+  "name": "node-ip-info",
+  "version": "0.1.0",
+  "description": "Information of ip",
+  "main": "bin/www",
+  "scripts": {
+    "start": "PORT=3000 NODE_ENV=production ./node_modules/.bin/nodemon .",
+    "updateipdb": " cd ./node_modules/geoip-lite && npm run updatedb",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gtrabanco/node-ip-info.git"
+  },
+  "keywords": [
+    "short",
+    "url",
+    "req",
+    "ts"
+  ],
+  "author": "Gabriel Trabanco Llano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gtrabanco/node-ip-info/issues"
+  },
+  "homepage": "https://github.com/gtrabanco/node-ip-info#readme",
+  "engines": {
+    "node": "~6.9.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "debug": "^2.3.3",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "geoip-lite": "^1.1.8",
+    "morgan": "^1.7.0"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/body-parser": "0.0.33",
+    "@types/ejs": "^2.3.33",
+    "@types/express": "^4.0.33",
+    "@types/express-serve-static-core": "^4.0.39",
+    "@types/mime": "0.0.29",
+    "@types/morgan": "^1.7.32",
+    "@types/node": "^6.0.46",
+    "@types/serve-static": "^1.7.31",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-develop-server": "^0.5.2",
+    "gulp-mocha": "^3.0.1",
+    "gulp-typescript": "^3.1.2",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.11.0",
+    "typescript": "^2.0.8",
+    "typings": "^2.0.0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "port": 3320,
+  "views": {
+    "engine": "ejs",
+    "dir": "src/views"
+  }
+}
