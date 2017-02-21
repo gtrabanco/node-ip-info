@@ -1,2 +1,2 @@
 # minute hour month year day-of-week user command
-0 3 * * 0 root cd /usr/src/app/node_modules/geip-lite && npm run updatedb 2>&1 /data/cron-updateIPDatabase.log
+0 3 * * 0 root cd /usr/src/app/node_modules/geoip-lite && npm run updatedb 2>&1 /data/cron-updateIPDatabase.log && cd ../.. && npm restart
